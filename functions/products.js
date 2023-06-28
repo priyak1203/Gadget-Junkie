@@ -1,9 +1,11 @@
 // domain/.netlify/functions/products
 
-const Airtable = require('airtable-node');
-const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
-  .base(process.env.AIRTABLE_BASE)
-  .table(process.env.AIRTABLE_TABLE);
+// const Airtable = require('airtable-node');
+// const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
+//   .base(process.env.AIRTABLE_BASE)
+//   .table(process.env.AIRTABLE_TABLE);
+
+const airtable = require('./airtable-config');
 
 exports.handler = async function () {
   try {
